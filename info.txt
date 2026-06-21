@@ -93,8 +93,8 @@ ipmon2/
 +-- ipmon.service
 +-- templates/
 ¦   +-- status.html
-¦   L-- events.html
-L-- README.md
+¦   +-- events.html
++-- README.md
 
 Python 3.9+
 SQLite WAL
