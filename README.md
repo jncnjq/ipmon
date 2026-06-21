@@ -1,11 +1,11 @@
 # ipmon
-1 Первичная инициализация
-mkdir /opt/ipmon
-cd /opt/ipmon
-cp *.py .
-cp schema.sql .
-python3 -c "from db import db; db.initialize()"
-python3 cli.py config http_port 18080
+#1 Первичная инициализация
+#mkdir /opt/ipmon
+#cd /opt/ipmon
+#cp *.py .
+#cp schema.sql .
+#python3 -c "from db import db; db.initialize()"
+#python3 cli.py config http_port 18080
 
 2 Добавить узлы
 python3 cli.py add Router 192.168.1.1 30
