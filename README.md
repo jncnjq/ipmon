@@ -5,11 +5,13 @@
 
 Жизненый цикл.
 
-1. Инициализация БД python3 -c "from db import db; db.initialize()"
-2. Конфигурация. Если значения по-умолчанию не устраивают.
+1. Инициализация БД
+  python3 -c "from db import db; db.initialize()"
+3. Конфигурация. Если значения по-умолчанию не устраивают.
   python3 cli.py config http_port 18080 def
   python3 cli.py config max_workers 50 def
   python3 cli.py config down_threshold 3 def
   python3 cli.py config up_threshold 2 def
   python3 cli.py config event_retention_days 90 def
-4. Запуск вручную python3 agent.py
+4. Запуск вручную
+  python3 agent.py
