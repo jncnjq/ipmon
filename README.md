@@ -29,5 +29,8 @@
   python3 cli.py config Отобразить конфигурационную информацию
   python3 cli.py list Отобразить добавленные узлы
   python3 cli.py summary Отобразить статистическую общую информацию
+  http://SERVER:18080/
+  http://SERVER:18080/api/status
+  http://SERVER:18080/events
 
 Информацию по командам cli можно посмотреть выполнив без cli.py без параметров
