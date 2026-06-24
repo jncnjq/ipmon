@@ -7,19 +7,31 @@
 Жизненый цикл.
 
 1. Инициализация БД
+```
   python3 -c "from db import db; db.initialize()"
-
+```
 3. Конфигурация. Если значения по-умолчанию не устраивают.
+```
   python3 cli.py config http_port 18080 def
+```
+```
   python3 cli.py config max_workers 50 def
+```
   python3 cli.py config down_threshold 3 def
+  ```
   python3 cli.py config up_threshold 2 def
+```
   python3 cli.py config event_retention_days 90 def
+  ```
 
 5. Добавление узлов NAME IP INTERVAL [ICMP|TCP] [PORT] --group --desc . Если не указан протокол то используется ICMP. Если при использовании TCP не указан порт то используется 3389
+```
   python3 cli.py add Router 192.168.1.1 30 Проверять каждые 30сек. Использовать ICMP.
+  ```
   python3 cli.py add RDP-PC 192.168.1.100 60 TCP Проверять каждые 60сек. Использовать TCP и порт по-умолчанию 3389
+```
   python3 cli.py add WEB 192.168.1.10 30 TCP 443 Проверять каждые 30сек. Использовать TCP и порт 443
+  ```
 
 4.1 Запуск вручную
 ```
@@ -27,10 +39,18 @@
 ```
 
 4.2 Запуск как сервис. Необходимо поправить путь к исполняемому файлу.
+```
   cp ipmon.service /etc/systemd/system/
+  ```
+```
   systemctl daemon-reload
+  ```
+```
   systemctl enable ipmon
+  ```
+```
   stemctl start ipmon
+  ```
   
 7. Проверка
   python3 cli.py config Отобразить конфигурационную информацию
